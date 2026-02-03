@@ -1,3 +1,4 @@
+// Search Task 1 : 
 1. Why is the output $30.00?
 The format specifier :C stands for Currency. It tells C# to format the number as money based on the
 system's regional settings. Since the system culture is set to US, the result is displayed as $30.00.
