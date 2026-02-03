@@ -17,7 +17,7 @@
             Console.WriteLine($"Tax : ${tax}");
             Console.WriteLine($"===================================");
             Console.WriteLine($"Total estimate : ${(num_Small * 25) + (num_large * 35) + tax}");
-            Console.WriteLine("This estimate is valid for 30 days");
+            //Console.WriteLine("This estimate is valid for 30 days");
         }
         }
     }
