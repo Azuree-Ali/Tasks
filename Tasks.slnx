@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Search_Task1/Search_Task1.csproj" Id="046aeae1-7186-4163-a829-f10a9cc2e017" />
   <Project Path="Task_One/Task_One.csproj" />
+  <Project Path="Task_Two_MainQ1/Task_Two_MainQ1.csproj" Id="4fea41b0-593f-4c5f-b645-314eaf3904d8" />
 </Solution>
