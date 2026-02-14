@@ -27,7 +27,7 @@
                         else
                         {
                             // displaying the numbers in the list 
-                            Console.WriteLine(string.Join(" , ", numbers));
+                            Console.WriteLine("[ " + string.Join(" , ", numbers) + " ]");
                         }
                         break;                  
                     case 'A':
