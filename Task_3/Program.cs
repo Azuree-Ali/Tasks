@@ -129,21 +129,24 @@
                         Console.WriteLine("Enter the Element to search : ");
                         int key = Convert.ToInt32(Console.ReadLine());
                         bool IsFound = false;
+                        int index = 0;
                         for (int i = 0;i< numbers.Count; i++)
                         {
                             if (key == numbers[i])
                             {
                                 IsFound = true;
-                            }
-                            if (!IsFound)
-                            {
-                                Console.WriteLine($"The element {key} is not found in the list!!");
+                                index = i;
                                 break;
                             }
-                            else
-                            {
-                                Console.WriteLine($"The element {key} is found at index : {i}");
-                            }
+                        }
+                        if (!IsFound)
+                        {
+                            Console.WriteLine($"The element {key} is not found in the list!!");
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"The element {key} is found at index : {index}");
                         }
                         break;
                     default :
