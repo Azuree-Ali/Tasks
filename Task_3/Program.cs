@@ -4,13 +4,15 @@
     {
         static void Main(string[] args)
         {
-            List<int> numbers = new List<int>();         
+            List<int> numbers = new List<int>();
             Console.WriteLine("Menu options : ");
             Console.WriteLine("P - Print numbers");
             Console.WriteLine("A - Add a number");
             Console.WriteLine("M - Display mean of the numbers");
             Console.WriteLine("S - Display the smallest number");
             Console.WriteLine("L - Display the largest number");
+            Console.WriteLine("C - Clear the List"); // Bonus
+            Console.WriteLine("F - Search for a specific element"); // Bonus
             Console.WriteLine("Q - Quit");
             while (true)
             {
@@ -117,6 +119,33 @@
                         // Clearing the list after quiting
                         numbers.Clear();
                         return;
+                    case 'C':
+                    case 'c':
+                        Console.WriteLine("the list is Cleared.");
+                        numbers.Clear();
+                        break;
+                    case 'F':
+                    case 'f':
+                        Console.WriteLine("Enter the Element to search : ");
+                        int key = Convert.ToInt32(Console.ReadLine());
+                        bool IsFound = false;
+                        for (int i = 0;i< numbers.Count; i++)
+                        {
+                            if (key == numbers[i])
+                            {
+                                IsFound = true;
+                            }
+                            if (!IsFound)
+                            {
+                                Console.WriteLine($"The element {key} is not found in the list!!");
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"The element {key} is found at index : {i}");
+                            }
+                        }
+                        break;
                     default :
                         Console.WriteLine("Unknown selection, please try again");
                         break;
