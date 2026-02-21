@@ -13,6 +13,7 @@
             Console.WriteLine("L - Display the largest number");
             Console.WriteLine("C - Clear the List"); // Bonus
             Console.WriteLine("F - Search for a specific element"); // Bonus
+            Console.WriteLine("O - Sorting the list in ascending order"); // Bonus
             Console.WriteLine("Q - Quit");
             while (true)
             {
@@ -148,6 +149,23 @@
                         {
                             Console.WriteLine($"The element {key} is found at index : {index}");
                         }
+                        break;
+                    case 'O':
+                    case 'o':
+                        int temp;
+                        for (int i = 0;i <numbers.Count - 1;i++)
+                        {
+                            for (int j = 0; j < numbers.Count - i - 1;j++)
+                            {
+                                if (numbers[j] > numbers[j + 1])
+                                {
+                                    temp = numbers[j];
+                                    numbers[j] = numbers[j + 1];
+                                    numbers[j + 1] = temp;
+                                }
+                            }
+                        }
+                        Console.WriteLine("List is sorted ascendingly..");
                         break;
                     default :
                         Console.WriteLine("Unknown selection, please try again");
