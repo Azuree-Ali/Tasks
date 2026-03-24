@@ -1,48 +1,9 @@
-// Search Task for Task 5 :
-// Q1
-        List<int> numbers = new List<int>();
-        Console.Write("Enter number of elements: ");
-        int n = Convert.Int32(Console.ReadLine());
-        for (int i = 0; i < n; i++)
-        {
-            Console.Write("Enter number: ");
-            int num = Convert.Int32(Console.ReadLine());
-            if (numbers.Contains(num)) // Checks if the list contains the num
-            {
-                throw new Exception("Duplicate number detected!");
-            }
-            numbers.Add(num);
-        }
-        Console.WriteLine("All numbers are unique.");
-    }
-    // Q2
-    class Program
-{
-    static void CheckVowels(string text)
-    {
-        string vowels = "aeiouAEIOU";
-        bool hasVowel = false;
-        for (int i = 0; i < text.Length; i++)
-        {
-            for (int j = 0; j < vowels.Length; j++)
-            {
-                if (text[i] == vowels[j])
-                {
-                    hasVowel = true;
-                    break;
-                }
-            }
-        }
-        if (!hasVowel)
-        {
-            throw new Exception("The string does not contain vowels!");
-        }
-        Console.WriteLine("The string contains vowels.");
-    }
-    static void Main()
-    {
-        Console.Write("Enter a string: ");
-        string input = Console.ReadLine();
-        CheckVowels(input);
-    }
-}
+// Search Task 6
+protected internal:
+This access modifier allows a member to be accessed from within the same assembly (project) OR from any derived class, even if it is in another assembly. It provides a wider level of accessibility and is useful when you want to allow both internal access and inheritance across projects.
+=========================================
+private protected:
+This access modifier allows a member to be accessed only within derived classes AND only if those classes are in the same assembly. It is more restrictive and is used when you want to limit access strictly to inheritance within the same project.
+========================================
+Difference:
+The key difference is that protected internal uses OR logic (same assembly or inheritance), while private protected uses AND logic (same assembly and inheritance).
