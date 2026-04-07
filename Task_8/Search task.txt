@@ -1,0 +1,7 @@
+Referential Actions:
+
+Referential actions are rules in relational databases that control what happens to records in a child table when the related record in the parent table is updated or deleted. They are used to maintain referential integrity between tables connected by foreign keys. Common referential actions include CASCADE, SET NULL, SET DEFAULT, and NO ACTION (or RESTRICT). CASCADE automatically updates or deletes the related rows in the child table when the parent row changes. SET NULL sets the foreign key value in the child table to NULL when the parent record is removed. SET DEFAULT assigns the default value to the foreign key. NO ACTION or RESTRICT prevents the parent row from being deleted or updated if related rows exist in the child table.
+
+Delete vs Truncate:
+
+DELETE and TRUNCATE are both SQL commands used to remove data from a table, but they behave differently. DELETE removes rows one at a time and allows the use of a WHERE clause to delete specific records. It logs each deleted row and can usually be rolled back within a transaction. TRUNCATE, on the other hand, removes all rows from a table at once and does not allow a WHERE clause. It is faster because it uses minimal logging and resets the identity counter of the table. However, TRUNCATE cannot be used if the table is referenced by a foreign key constraint. In general, DELETE is used when you need to remove specific rows, while TRUNCATE is used when you want to quickly clear all data from a table.
