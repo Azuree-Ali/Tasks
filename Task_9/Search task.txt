@@ -1,0 +1,25 @@
+Task: Transaction Log Backup
+
+Objective:
+Perform a transaction log backup to ensure that all recent database transactions are safely stored and can be recovered in case of failure.
+
+Requirements:
+- Use the FULL or BULK_LOGGED recovery model.
+- Ensure a full database backup has been taken before performing log backups.
+- Schedule regular transaction log backups to prevent log file growth.
+
+Steps:
+1. Verify the database recovery model is set to FULL or BULK_LOGGED.
+2. Take an initial full backup if not already done.
+3. Execute the transaction log backup using the following SQL command:
+
+   BACKUP LOG [DatabaseName]
+   TO DISK = 'C:\Backups\DatabaseName_Log.trn'
+   WITH INIT, NAME = 'Transaction Log Backup';
+
+4. Confirm that the backup file is created successfully.
+5. Monitor and repeat backups periodically (e.g., every 15–30 minutes).
+
+Expected Result:
+- A .trn file containing all recent transactions is created.
+- Database can be restored to a specific point in time using log backups.
