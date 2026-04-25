@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Task_10/">
+    <Project Path="Sales_Database/Sales_Database.csproj" Id="92e6f4ce-5f6b-432b-b24c-08f2edc611cd" />
+    <Project Path="Student_System/Student_System.csproj" Id="25ec2a7b-32db-415f-9638-67c6fdb2e18e" />
+  </Folder>
   <Project Path="Bonus_Task/Bonus_Task.csproj" Id="618934fc-61f1-44b5-b5d3-931ed1a89b51" />
   <Project Path="Search_Task1/Search_Task1.csproj" Id="046aeae1-7186-4163-a829-f10a9cc2e017" />
   <Project Path="Task_3/Task_3.csproj" Id="22b1d024-3722-4372-8d5e-9dcaded6d152" />
